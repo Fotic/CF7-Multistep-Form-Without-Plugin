@@ -85,7 +85,7 @@ document.addEventListener( 'wpcf7mailsent', function( event ) {
 }
 add_action( 'wp_footer', 'vc_dom_event_footer' );
 ```
-#### What this function doing ⁉️
+#### * What this function doing ⁉️
 Basically, add inserted values from Form 1 to Form 2 link and with `default:get` passing the values to fields also redirect to Form 2.
 
 ## Images of use:
