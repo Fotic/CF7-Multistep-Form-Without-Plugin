@@ -53,7 +53,7 @@
 ## ❗️Important Part❗️
 ### Pass Values from Form 1 to Form 2 and Redirect to Form 2
 
-#### Put On function.php
+#### Put On 👨‍💻 function.php 👩‍💻
 ```
 function vc_dom_event_footer() {
 ?>
@@ -85,7 +85,7 @@ document.addEventListener( 'wpcf7mailsent', function( event ) {
 }
 add_action( 'wp_footer', 'vc_dom_event_footer' );
 ```
-#### What this function doing ??!
+#### What this function doing ⁉️
 Basically, add inserted values from Form 1 to Form 2 link and with `default:get` passing the values to fields also redirect to Form 2.
 
 ## Images of use:
@@ -93,7 +93,7 @@ Basically, add inserted values from Form 1 to Form 2 link and with `default:get`
 <img src="https://a.imagem.app/dTVeC.png" alt="dTVeC.png" border="0" width="300"/>
 
 ### Link of Form 2:
-<img src="https://a.imagem.app/dTvpN.png" alt="dTvpN.png" border="0" width="300"/>
+<img src="https://a.imagem.app/dTvpN.png" alt="dTvpN.png" border="0" width="500"/>
 
 ### Form 2:
 <img src="https://a.imagem.app/dT4LY.png" alt="dT4LY.png" border="0" width="300"/>
