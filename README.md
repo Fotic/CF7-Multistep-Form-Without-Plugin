@@ -1,5 +1,5 @@
 # 🌐 WordPress Contact Form 7
-## Pass Values from one form to another
+## Pass Values from One Form to Another
 
 ## 🖥️ Screenshots
 ### Form 1
