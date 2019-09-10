@@ -49,3 +49,41 @@
 
 [submit "Αποστολή"]
 ```
+
+## Now the most ❗️Important Part❗️
+### Pass Values from Form 1 to Form 2
+
+#### Put On function.php
+```
+function vc_dom_event_footer() {
+?>
+<script type="text/javascript">
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+    if ( '188' == event.detail.contactFormId ) {
+         var inputs = event.detail.inputs;
+		 for ( var i = 0; i < inputs.length; i++ ) {
+			 if ( 'children_num' == inputs[i].name ) {
+				var children_num = inputs[i].value;
+			 }
+			 if ( 'parent_num' == inputs[i].name ) {
+				var parent_num = inputs[i].value;
+			 }
+			 if ( 'choose_month' == inputs[i].name ) {
+				var choose_month = inputs[i].value;
+			 }
+			 if ( 'choose_year' == inputs[i].name ) {
+				var choose_year = inputs[i].value;
+			 }
+		 }
+		 window.location.href = '/?page_id=178/'+'&children_num='+children_num+'&parent_num='+parent_num+'&choose_month='+choose_month+'&choose_year='+choose_year;
+    }else if ( '190' == event.detail.contactFormId ) {
+		 window.location.href = '/?page_id=178/';
+    }
+}, false );
+</script>
+<?php
+}
+add_action( 'wp_footer', 'vc_dom_event_footer' );
+```
+#### What this function doing ??!
+Basically add inserted values from Form 1 to Form 2 link and with `default:get` passing the values on fields.
